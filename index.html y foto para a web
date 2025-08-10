@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tu Nombre — Terapia Ocupacional Neurológica</title>
+  <meta name="description" content="Terapeuta ocupacional especializada en neurología. Rehabilitación tras ictus, daño cerebral y enfermedades neurodegenerativas." />
+  <style>
+    :root{--maxw:1100px;--pad:18px;--accent:#2a6b6b;}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.5;margin:0;color:#222}
+    .container{max-width:var(--maxw);margin:0 auto;padding:22px}
+    header{display:flex;align-items:center;gap:18px;padding:18px 0}
+    .brand{font-weight:700;font-size:1.15rem}
+    .hero{display:grid;grid-template-columns:1fr;gap:16px;padding:28px 0}
+    .hero h1{margin:0;font-size:1.9rem}
+    .hero p{margin:0;color:#444}
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:white;background:var(--accent)}
+    section{padding:20px 0;border-top:1px solid #eee}
+    h2{margin:0 0 10px 0;font-size:1.2rem}
+    .grid{display:grid;gap:14px}
+    @media(min-width:800px){ .hero{grid-template-columns:1fr 380px} }
+    .card{background:#fafafa;padding:14px;border-radius:10px}
+    .services ul{padding-left:18px;margin:0}
+    .contact form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #ddd;font:inherit}
+    footer{padding:18px 0;color:#666;font-size:0.9rem}
+    .small{font-size:0.92rem;color:#555}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="brand">[Tu Nombre]</div>
+        <div class="small">Terapeuta Ocupacional • Rehabilitación Neurológica</div>
+      </div>
+      <nav style="margin-left:auto">
+        <a href="#contact" class="small">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="home">
+      <div>
+        <h1>Terapia ocupacional neurológica para recuperar autonomía</h1>
+        <p>Me especializo en rehabilitación tras ictus, daño cerebral adquirido y patologías neurológicas. Trabajo con planes personalizados basados en evidencia y centrados en la persona.</p>
+        <p style="margin-top:12px"><a class="btn" href="#contact">Solicitar valoración</a></p>
+      </div>
+      <div class="card">
+        <strong>Servicios destacados</strong>
+        <ul style="margin-top:10px">
+          <li>Evaluación funcional neurológica</li>
+          <li>Programas de recuperación tras ictus</li>
+          <li>Intervención en enfermedad de Parkinson</li>
+          <li>Rehabilitación a domicilio y teleconsulta</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about">
+      <h2>Sobre mí</h2>
+      <p class="small">Soy terapeuta ocupacional titulada en [Universidad] y he completado formación específica en rehabilitación neurológica (curso X, curso Y). Mi objetivo es mejorar la calidad de vida de las personas a través de intervenciones individualizadas, entrenamiento en actividades de la vida diaria y adaptación del entorno.</p>
+    </section>
+
+    <section class="services">
+      <h2>Cómo trabajo</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Evaluación personalizada</strong>
+          <p class="small">Valoración exhaustiva para diseñar objetivos funcionales realistas y medibles.</p>
+        </div>
+        <div class="card">
+          <strong>Plan de intervención</strong>
+          <p class="small">Entrenamiento en actividades de la vida diaria, estimulación cognitiva, terapia física funcional y educación a familiares.</p>
+        </div>
+        <div class="card">
+          <strong>Seguimiento</strong>
+          <p class="small">Revisión periódica de avances y ajuste del plan terapéutico según evolución.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>Ejemplos de trabajo (anonimizado)</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Programa post-ictus (6 semanas)</strong>
+          <p class="small">Objetivo: mejorar autonomía en actividades básicas. Intervención: entrenamiento en autocuidado, transferencias y uso de ayudas técnicas.</p>
+        </div>
+        <div class="card">
+          <strong>Intervención en Parkinson</strong>
+          <p class="small">Objetivo: mantener funcionalidad y participación social. Intervención: estrategias compensatorias, ejercicios de motricidad fina y entrenamiento de ritmo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact">
+      <h2>Contacto</h2>
+      <p class="small">Email: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a> • Tel: +34 600 000 000</p>
+
+      <form action="https://formspree.io/f/{tu-id}" method="POST" style="max-width:560px">
+        <input type="text" name="name" placeholder="Tu nombre" required />
+        <input type="email" name="_replyto" placeholder="Correo" required />
+        <textarea name="message" rows="4" placeholder="Breve mensaje" required></textarea>
+        <button class="btn" type="submit">Enviar mensaje</button>
+      </form>
+
+      <p class="small" style="margin-top:10px">También disponible para colaboraciones en hospitales y proyectos de investigación.</p>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="year"></span> [Tu Nombre] — Terapia Ocupacional Neurológica</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
