@@ -65,16 +65,6 @@
       font-weight: 600;
       font-size: 1.3rem;
       color: #d8a7b1; /* rosa empolvado */
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-    .frase {
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: #b26a72; /* rosa medio */
-      margin-top: 4px;
-      font-style: italic;
     }
 
     main {
@@ -116,4 +106,93 @@
     a {
       color: #d8a7b1;
       text-decoration: none;
-      font-weight: 60
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 0.9rem;
+      color: #777;
+      font-weight: 400;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button class="tab-btn active" data-tab="presentacion">Quién soy</button>
+    <button class="tab-btn" data-tab="curriculum">Currículum</button>
+    <button class="tab-btn" data-tab="servicios">Servicios</button>
+    <button class="tab-btn" data-tab="contacto">Contacto</button>
+  </nav>
+
+  <header>
+    <div class="nombre">Elisabeth Coba Jiménez</div>
+    <div class="titulo">Terapia Ocupacional Neurológica</div>
+  </header>
+
+  <main>
+    <section id="presentacion" class="active">
+      <img src="images/tu_foto.jpg" alt="Foto de Elisabeth Coba Jiménez" />
+      <h2>Presentación</h2>
+      <p>
+        Hola, soy <strong>Elisabeth Coba Jiménez</strong>, graduada en Terapia Ocupacional especializada en terapia ocupacional neurológica.  
+        Mi objetivo es ayudarte a mejorar tu calidad de vida mediante tratamientos personalizados adaptados a tus necesidades.
+      </p>
+    </section>
+    <section id="curriculum">
+      <h2>Currículum Básico</h2>
+      <ul>
+        <li>Grado en Terapia Ocupacional por la Universidad [Nombre].</li>
+        <li>Especialización en Terapia Ocupacional Neurológica.</li>
+        <li>Experiencia en hospitales y centros de rehabilitación neurológica.</li>
+        <li>Formación continua en técnicas avanzadas y neurorehabilitación.</li>
+      </ul>
+    </section>
+    <section id="servicios">
+      <h2>Servicios que Ofrezco</h2>
+      <ul>
+        <li>Evaluación y diagnóstico funcional neurológico.</li>
+        <li>Planificación y aplicación de terapias ocupacionales personalizadas.</li>
+        <li>Rehabilitación para pacientes con lesiones medulares, ictus, esclerosis múltiple, Parkinson y otras patologías neurológicas.</li>
+        <li>Apoyo y asesoramiento a familiares y cuidadores.</li>
+      </ul>
+    </section>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Estoy disponible para consultas y valoraciones personalizadas. Puedes contactarme en:</p>
+      <ul>
+        <li>Email: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></li>
+        <li>Teléfono: +34 600 000 000</li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer">linkedin.com/in/tuusuario</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Elisabeth Coba Jiménez - Terapia Ocupacional Neurológica
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('main section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
